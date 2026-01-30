@@ -1,0 +1,13 @@
+# Python junk
+__pycache__/
+*.py[cod]
+
+# ROS2 Build folders (Never upload these!)
+build/
+install/
+log/
+*.egg-info/
+
+# System junk
+.DS_Store
+.vscode/
