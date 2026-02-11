@@ -1,6 +1,22 @@
 # 🤖 ROS 2 Self-Balancing Robot Simulation
 
-A high-fidelity simulation of a two-wheeled self-balancing robot. This project demonstrates the integration between **ROS 2 (Humble/Foxy)** and **CoppeliaSim**, utilizing a **PID control loop** to maintain equilibrium.
+**An end-to-end robotics engineering project bridging the gap between simulation and reality.**  
+This repository hosts the **ROS 2** control logic and **CoppeliaSim** physics environment for a two-wheeled self-balancing robot. It serves as both a high-fidelity digital twin and the primary development platform for a PID-based control system that has been successfully deployed onto physical hardware.
+
+## 🎥 Demo
+
+![Robot Demo](demo.gif)
+
+> **Impressive results:** This is the high-fidelity **CoppeliaSim simulation** of a ROS 2 project, where a robot maintains perfect equilibrium using a custom-tuned **PID controller**.
+
+---
+
+## 🌍 From Simulation to Reality
+
+This project wasn't just about virtual models. The algorithms developed and tuned here were successfully deployed on a **physical Arduino-based robot**.
+
+Check out the implementation, including **photos and videos of the robot in action**, in the dedicated repo:
+👉 **[Self-Balancing Robot - Physical Implementation](https://github.com/manumezog/self-balancing-robot-ros2-real)**
 
 ---
 
@@ -97,12 +113,6 @@ The robot uses a sophisticated PID controller implemented in `pid_controller.py`
 - **Anti-Windup:** The integral term is only accumulated when the robot is near its vertical target (within ±11°).
 - **Safety Kill-Switch:** If the tilt angle exceeds 45°, the motors are automatically disabled to prevent damage.
 - **Target Trim:** A slight target angle offset (`0.06` rad) is used to compensate for physical asymmetries.
-
----
-
-## 🎥 Demo
-
-![Robot Demo](demo.gif)
 
 ---
 
